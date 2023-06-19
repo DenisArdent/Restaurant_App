@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Restaurant App</string>
+    <string name="main">Главная</string>
+    <string name="account">Аккаунт</string>
+    <string name="cart">Корзина</string>
+    <string name="search">Поиск</string>
+</resources>

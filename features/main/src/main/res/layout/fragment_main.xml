@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    android:paddingHorizontal="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.denisardent.main.presentation.MainFragment">
+
+    <ImageView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/settlement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Санкт-Петербург"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/location"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 Августа, 2023"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/settlement"
+        app:layout_constraintTop_toBottomOf="@id/location"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_iv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:srcCompat="@drawable/stephanie_liverani" />
+
+    <LinearLayout
+        android:id="@+id/card_views_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_1"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/sand"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded">
+
+            <ImageView
+                android:id="@+id/category_iv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/category_name_1"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textSize="20sp"
+                android:maxLines="2"
+
+                android:layout_gravity="top|start"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/light_pink"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded">
+
+            <ImageView
+                android:id="@+id/category_iv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/category_name_2"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textSize="20sp"
+                android:maxLines="2"
+
+                android:layout_gravity="top|start"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/light_blue"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded">
+
+
+            <ImageView
+                android:id="@+id/category_iv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/category_name_3"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textSize="20sp"
+                android:maxLines="2"
+
+                android:layout_gravity="top|start"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/light_green"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded">
+            <ImageView
+                android:id="@+id/category_iv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/category_name_4"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textSize="20sp"
+                android:maxLines="2"
+
+                android:layout_gravity="top|start"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

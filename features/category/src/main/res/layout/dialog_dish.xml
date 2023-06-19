@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rectangle_start">
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/dish_iv"
+        android:layout_width="310dp"
+        android:layout_height="230dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primary_white"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded"
+
+        />
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="@id/dish_iv"
+        app:layout_constraintEnd_toEndOf="@id/dish_iv"
+        />
+
+    <TextView
+        android:id="@+id/dish_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text = "Рыба с овощами и рисом"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/dish_iv"
+        app:layout_constraintTop_toBottomOf="@id/dish_iv"
+        />
+
+    <TextView
+        android:id="@+id/dish_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text = "799₽"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/dish_iv"
+        app:layout_constraintTop_toBottomOf="@id/dish_name"
+        />
+
+    <TextView
+        android:id="@+id/dish_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text = "560г"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/dish_cost"
+        app:layout_constraintTop_toBottomOf="@id/dish_name"
+        />
+
+    <TextView
+        android:id="@+id/dish_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text = "Рыба маринованная со специями, лимонным соком, соевым соусом и запечeнная в духовке с лучком, томатами и картошечкой под золотистой майонезно-сырной шубкой"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/dish_iv"
+        app:layout_constraintEnd_toEndOf="@id/dish_iv"
+        app:layout_constraintTop_toBottomOf="@id/dish_cost"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_to_cart_button"
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/add_to_cart"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/dish_description"
+        app:layout_constraintStart_toStartOf="@id/dish_iv"
+        app:layout_constraintEnd_toEndOf="@id/dish_iv"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
